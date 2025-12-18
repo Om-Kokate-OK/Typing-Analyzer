@@ -48,17 +48,18 @@ function TypingBox({ onFinish }) {
     }
   }
 
-  return (
-    <div>
-      <p className="text">{sampleText}</p>
+    return (
+    <div className="card">
+      <div className="typing-text">{sampleText}</div>
+
       <textarea
         value={input}
         onChange={handleChange}
-        placeholder="Start typing..."
-        disabled={input.length === sampleText.length}
+        placeholder="Start typing here..."
       />
     </div>
   );
 }
+
 
 export default TypingBox;

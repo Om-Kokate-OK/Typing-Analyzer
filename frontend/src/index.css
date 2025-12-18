@@ -1,0 +1,172 @@
+:root {
+  --bg: #0b1220;
+  --card: #111827;
+  --border: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px 60px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Typing ---------- */
+
+.typing-text {
+  background: #020617;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: var(--muted);
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ---------- Results ---------- */
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat {
+  flex: 1;
+  background: #020617;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.stat p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Weak Keys ---------- */
+
+.key-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.key-item {
+  background: #020617;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* ---------- Auth ---------- */
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 360px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-link {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--accent);
+  cursor: pointer;
+}
