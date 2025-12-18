@@ -19,4 +19,12 @@ router.get("/last", auth, async (req, res) => {
   res.json(sessions);
 });
 
+router.get("/", auth, async (req, res) => {
+  const sessions = await Session.find({ userId: req.user.id })
+    .sort({ createdAt: 1 })
+    .limit(10);
+
+  res.json(sessions);
+});
+
 module.exports = router;
